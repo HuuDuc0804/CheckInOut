@@ -6,7 +6,6 @@ import 'package:http/http.dart' show Client;
 class CheckInOutAPI {
   Client client = Client();
   final _baseURL = 'http://103.17.88.114:8169/api';
-  // final _baseURL = 'http://10.0.9.182:8168/api';
 
   Future<List<CheckInOutModel>> getList() async {
     final response = await client.get(Uri.parse('$_baseURL/CheckInOut'));
